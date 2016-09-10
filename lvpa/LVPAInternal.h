@@ -47,12 +47,13 @@
 #  define COMPILER COMPILER_UNKNOWN
 #endif
 
+// SNICHOLS: commenting this out
 // stupid warnings
-#if COMPILER == COMPILER_MICROSOFT
-#  define _CRT_SECURE_NO_WARNINGS
-#  define _CRT_SECURE_NO_DEPRECATE
-#  pragma warning(disable: 4996)
-#endif
+//#if COMPILER == COMPILER_MICROSOFT
+//#  define _CRT_SECURE_NO_WARNINGS
+//#  define _CRT_SECURE_NO_DEPRECATE
+//#  pragma warning(disable: 4996)
+//#endif
 
 ////////////////////////////////////
 // Compiler defines
@@ -63,7 +64,8 @@
     #define I64FMTD "%I64u"
     #define I64LIT(x) (x ## i64)
     #define UI64LIT(x) (x ## ui64)
-    #define snprintf _snprintf
+	// SNICHOLS: commenting this out
+    //#define snprintf _snprintf
 #else
     #define stricmp strcasecmp
     #define strnicmp strncasecmp

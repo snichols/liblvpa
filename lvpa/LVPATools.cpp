@@ -391,7 +391,7 @@ std::string GenerateTempFileName(const std::string& fn)
             return &buf[0];
 
     // Give up.
-    logerror("GenerateTempFileName(%s) - giving up");
+    logerror("GenerateTempFileName(%s) - giving up", fn.c_str());
     return "";
 }
 

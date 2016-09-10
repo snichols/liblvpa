@@ -165,7 +165,7 @@ void DeflateCompressor::Decompress(void)
     decompress((void*)target, &origsize, (const void*)contents(), size(), _windowBits);
     if(origsize != rs)
     {
-        logerror("DeflateCompressor: Inflate error! result=%d cursize=%u origsize=%u realsize=%u",size(),origsize,rs);
+        logerror("DeflateCompressor: Inflate error! cursize=%u origsize=%u realsize=%u",size(),origsize,rs);
         delete [] target;
         return;
     }

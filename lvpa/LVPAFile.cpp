@@ -1088,7 +1088,7 @@ bool LVPAFile::SaveAs(const char *fn, LVPAComprLevels compression /* = LVPA_DEFA
     std::string tmpfn = GenerateTempFileName(fn);
     if(tmpfn.empty())
     {
-        logerror("Failed to generate temporary file name for output!", fn);
+        logerror("Failed to generate temporary file name for output!");
         return false;
 
         // TODO: In that case, we could still open the original file and start writing to it,
