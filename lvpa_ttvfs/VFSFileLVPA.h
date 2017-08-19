@@ -10,7 +10,7 @@ LVPA_NAMESPACE_END
 
 VFS_NAMESPACE_START
 
-class VFSFileLVPA : public VFSFile
+class VFSFileLVPA : public File
 {
 public:
     VFSFileLVPA(LVPA_NAMESPACE_IMPL LVPAFile *src, unsigned int headerId);
@@ -18,7 +18,7 @@ public:
     virtual bool open(const char *mode = NULL);
     virtual bool isopen(void) const;
     virtual bool iseof(void) const;
-    virtual bool close(void);
+    virtual void close(void);
     virtual bool seek(vfspos pos);
     virtual bool flush(void);
     virtual vfspos getpos(void) const;
